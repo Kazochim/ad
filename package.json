@@ -1,0 +1,17 @@
+{
+  "name": "discord-payos-store-bot",
+  "version": "1.0.0",
+  "description": "Discord store bot with slash commands, payOS QR payments, auto webhook, and ticket support.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@payos/node": "^1.0.0",
+    "body-parser": "^1.20.3",
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}
