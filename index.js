@@ -11,7 +11,8 @@ const {
 } = require('discord.js');
 
 const express = require('express');
-const { PayOS } = require('@payos/node');
+const PayOSModule = require('@payos/node');
+const PayOS = PayOSModule.PayOS || PayOSModule;
 const PRODUCTS = require('./products');
 
 // ====== CONFIG / BIẾN MÔI TRƯỜNG ======
@@ -399,3 +400,4 @@ app.listen(port, () => {
 
 // ====== RUN BOT ======
 client.login(DISCORD_TOKEN);
+
