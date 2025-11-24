@@ -393,12 +393,14 @@ app.post(process.env.WEBHOOK_PATH || '/payos-webhook', async (req, res) => {
   }
 });
 
-const port = Number(WEBHOOK_PORT) || 3000;
+const port = process.env.PORT || Number(WEBHOOK_PORT) || 3000;
 app.listen(port, () => {
   console.log(`Webhook server chạy ở cổng ${port}`);
 });
 
+
 // ====== RUN BOT ======
 client.login(DISCORD_TOKEN);
+
 
 
