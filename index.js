@@ -25,18 +25,18 @@ const {
   VOUCH_CHANNEL_ID,
   PRICE_CHANNEL_ID,
   LOG_CHANNEL_ID,
-  PAYOS_CLIENT_ID,
-  PAYOS_API_KEY,
-  PAYOS_CHECKSUM_KEY,
+  PAY_CLIENT_ID,
+  PAY_API_KEY,
+  PAY_CHECKSUM_KEY,
   WEBHOOK_PORT,
   WEBHOOK_PATH
 } = process.env;
 
 // ====== PAYOS INIT ======
 const payOS = new PayOS({
-  clientId: PAYOS_CLIENT_ID,
-  apiKey: PAYOS_API_KEY,
-  checksumKey: PAYOS_CHECKSUM_KEY
+  clientId: PAY_CLIENT_ID,
+  apiKey: PAY_API_KEY,
+  checksumKey: PAY_CHECKSUM_KEY
 });
 
 // Map lưu orderCode -> info đơn hàng (demo: lưu trong RAM)
@@ -400,4 +400,5 @@ app.listen(port, () => {
 
 // ====== RUN BOT ======
 client.login(DISCORD_TOKEN);
+
 
